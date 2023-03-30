@@ -68,7 +68,6 @@ defende_2 = pygame.transform.scale(defende_2, (p2_xtamanho, p2_ytamanho))
 p1 = defende_1
 p2 = defende_2
 
-
 #colisao:
 p1c = p1.get_rect()
 p2c = p2.get_rect()
@@ -78,9 +77,6 @@ p1c.x = x_p1
 p1c.y = y_p1
 p2c.x = x_p2
 p2c.y = y_p2
-
-
-
 
 
 #booleanos:
@@ -110,9 +106,9 @@ def recomeco():
     p1 = defende_1
     p2 = defende_2
 
-
 fonte = pygame.font.SysFont('arial', 40, True, True)
 fontet = pygame.font.SysFont('arial', 60, True, True)
+
 while True:
     clock.tick(230)
     for event in pygame.event.get():
@@ -173,7 +169,6 @@ while True:
     #mensagens
     pontos1 = fonte.render(f'munição: {qtiros_1}', True, (255, 255, 255))
     pontos2 = fonte.render(f'munição: {qtiros_2}', True, (255, 255, 255))
-    #vencedor = fonte.rende3r(f'o vencedor é {}')
 
     #colisao do personagem:
     if balac_1.colliderect(p2c) and p2 == carrega_2 or balac_1.colliderect(p2c) and p2 == tiro_2:
