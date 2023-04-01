@@ -223,7 +223,6 @@ while True:
 
 
     #o que aparecera na tela:
-    tela.blit(tela, (0, 0))
     pygame.draw.rect(tela, (255, 0, 0), p2c, 4)
     pygame.draw.rect(tela, (255, 0, 0), p1c, 4)
     pygame.draw.rect(tela, (255, 0, 0), balac_1, 4)
