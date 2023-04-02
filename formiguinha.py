@@ -1,6 +1,3 @@
-# jogos_pygame
-#Jogos feitos por fulanodtals, para fins de experiência,  aprendizagem e entretenimento. 
-
 import pygame
 from pygame.locals import *
 from sys import exit
@@ -63,7 +60,6 @@ pygame.init()
 
 tela = pygame.display.set_mode((largura, altura))
 pygame.display.set_caption('formiguinha')
-
 clock = pygame.time.Clock()
 fonte1 = pygame.font.SysFont('kristenitc', 78, True, True)
 fonte2 = pygame.font.SysFont('kristenitc', 36, True, True)
@@ -138,7 +134,6 @@ while True:
                     if tiro == False:
                         x_fogo -= 2
                     alien = alien_e
-                    
                 # colizao:
                 formiga_c = pygame.draw.rect(tela, (255, 0, 0), ((x_formiga + 35), (y_formiga + 43), 40, 40))
                 fogo_c = pygame.draw.rect(tela, (255, 0, 0), ((x_fogo + 2), (y_fogo), 35, 65))
@@ -151,7 +146,6 @@ while True:
                             if event.type == QUIT:
                                 pygame.quit()
                                 exit()
-                                
                             # ou se clicar r ele reinicia
                             if event.type == KEYDOWN:
                                 if event.key == K_r:
@@ -160,7 +154,7 @@ while True:
                                 if event.key == K_s:
                                     pygame.quit()
                                     exit()
-                        #prints
+
                         tela.blit(fontet.render('A formiguinha foi extinta', True, (0, 0, 0)), (220, 90))
                         tela.blit(fonte.render('Precione r para tentar denovo', True, (0, 0, 0)), (265, 295))
                         tela.blit(fonte.render('ou s para arregar', True, (0, 0, 0)), (361, 332))
@@ -175,13 +169,10 @@ while True:
                 tela.blit(alien, (x_alien, y_alien))
 
                 pygame.display.flip()
-        
-        #sair
+
         if x > 395 and y > 400 and x < 595 and y < 494:
             pygame.quit()
             exit()
-            
-    #prints
     tela.blit(fundo1, (0, 0))
     tela.blit(texto, (224, 40))
     texto_play = fonte2.render('começar', True, (111, 115, 114))
@@ -190,5 +181,7 @@ while True:
     sair = pygame.draw.rect(tela, (49, 0, 0), (395, 400, 200, 64))
     tela.blit(texto_play, (408, 209))
     tela.blit(texto_exit, (454, 409))
+
+
 
     pygame.display.flip()
